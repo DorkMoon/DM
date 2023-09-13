@@ -1,0 +1,333 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+    cursor: url('images/red.png'), auto;
+}
+
+
+@font-face {
+    font-family: 'Star Jedi';
+    src:url('fonts/Starjedi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Star Jhol';
+    src: url('fonts/Starjhol.woff') format('woff');
+
+}
+@font-face {
+    font-family: 'Home';
+    src: url('fonts/BackHome.woff') format('woff');
+}
+.opening-crawl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: yellow;
+    font-family: 'Star Jhol', sans-serif;
+    font-size: 1rem;
+    animation: zoomOut 4s ease-in-out forwards;
+    opacity: 1;
+    transform-origin: center;
+    z-index: 3;
+}
+
+.star-field {
+    position: absolute;
+    width: 1540px;
+    height: 1080px;
+    background: url('images/star-field1.gif');
+    z-index: 0;
+}
+
+@keyframes zoomOut {
+    0% {
+        opacity: 1;
+        transform: scale(8);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 0; 
+    animation: fadeIn 5s ease-in forwards;
+    z-index: 3;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%;
+    }
+}
+.navbar ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 35px; /* Adjust the spacing between links */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Star Jedi', sans-serif;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: rgb(254, 254, 254);
+
+}
+
+.logo-container {
+    display: flex;
+    position: absolute;
+    left: 1100px;
+    top: 50px;
+    width: 300px;
+    height: auto;
+    z-index: 1;
+    animation: floatFigureEight 7.5s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes floatFigureEight {
+    0%, 100% {
+        transform: translate(0, 0); /* Start and end position (no movement) */
+    }
+    25% {
+        transform: translate(60px, 60px); /* Move right (horizontal motion) */
+    }
+    50% {
+        transform: translate(0, 60px); /* Back to the starting position */
+    }
+    75% {
+        transform: translate(-60px, 0); /* Move left (horizontal motion) */
+    }
+    100% {
+        transform: translate(0, 0); /* Return to the starting position */
+    }
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+    animation: fadeIn 5s ease-in-out;
+
+}
+
+.landing-page {
+    color: rgb(255, 247, 0); /* Text color */
+    display: flex; /* Ensure Starit's displayed as a block-level element */
+    position: absolute;
+    z-index: 2;
+    animation: fadeIn 7s ease-in-out;
+
+}
+
+.landing-page h2 {
+    position: absolute;
+    top: 60px; 
+    left: 560px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Star Jedi', sans-serif;
+    font-size: 4rem;
+}
+
+.st {
+    position: absolute;
+    left: 420px;
+    top: 180px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Star Jedi';
+    font-size: 1.09rem;
+    color: rgb(252, 252, 252);
+    z-index: 3;
+    animation: fadeIn 5s ease-in;
+    -webkit-text-stroke: 1px rgb(98, 0, 0); /* For Chrome, Safari, and newer versions of Edge */
+}
+
+.sts {
+    position: absolute;
+    left: 465px;
+    top: 360px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Star Jedi';
+    font-size: 1rem;
+    color: rgb(252, 252, 252);
+    animation: fadeIn 7s ease-in-out;
+    -webkit-text-stroke: 1px rgb(98, 0, 0); /* For Chrome, Safari, and newer versions of Edge */
+    z-index: 3;
+    text-align: center;
+}
+
+.stss {
+    position: absolute;
+    left: 875px;
+    top: 360px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Star Jedi';
+    font-size: 1rem;
+    color: rgb(252, 252, 252);
+    animation: fadeIn 7s ease-in-out;
+    -webkit-text-stroke: 1px rgb(98, 0, 0); /* For Chrome, Safari, and newer versions of Edge */
+    z-index: 3;
+    text-align: center;
+}
+
+.vadex {
+    display: flex;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    left: 180px;
+    top: 440px;
+    animation: fadeIn 3s ease-in-out;
+    z-index: 2;
+
+}
+
+.new-pic {
+    display: flex;
+    position: absolute;
+    left: -60px;
+    top: -75px;
+    height: 910px;
+    width: 1640px;
+    z-index: 2;
+
+}
+
+.new-pic img {
+    width: 100%;
+    height: auto;
+}
+
+.new-pic2 {
+    display: flex;
+    position: absolute;
+    left: -60px;
+    top: 770px;
+    height: 410px;
+    width: 1640px;
+    z-index: 2;
+
+}
+
+.new-pic2 img {
+    width: 100%;
+    height: auto;
+}
+.rounded-vertical-rectangle2 {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background-color: #ff000063;
+    border-radius: 50px;
+    position: absolute;
+    left: 400px;
+    top: 360px;
+    opacity: 0;
+    animation: fadeIn 7s ease-in-out;
+}
+.rounded-vertical-rectangle {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background-color: #ff000063;
+    border-radius: 50px;
+    position: absolute;
+    left: 235px;
+    top: 400px;
+    opacity: 0;
+    animation: fadeIn 7s ease-in-out;
+}
+
+.rounded-vertical-rectangle3 {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background-color: #ff000063;
+    border-radius: 50px;
+    position: absolute;
+    left: 810px;
+    top: 360px;
+    opacity: 0;
+    animation: fadeIn 7s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.rounded-vertical-rectangle {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+.rounded-vertical-rectangle2 {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+.rounded-vertical-rectangle3 {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes pulse {
+    0% {
+        color: initial;
+    }
+    50% {
+        color: red;
+    }
+    100% {
+        color: initial; 
+    }
+}
+@keyframes pulsea {
+    0% {
+        color: initial;
+    }
+    50% {
+        color: rgb(255, 255, 255);
+    }
+    100% {
+        color: initial; 
+    }
+}
+
+.pulsing-text {
+    animation: pulse 2.5s infinite;
+}
+.pulsing-texta {
+    animation: pulsea 2.5s infinite;
+}
+
